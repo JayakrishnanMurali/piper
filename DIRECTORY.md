@@ -1,3 +1,4 @@
+```
 piper/
 ├── apps/                          # Applications (API, Dashboard)
 │   ├── api/                       # Backend API
@@ -46,3 +47,4 @@ piper/
 ├── deno.json                      # Root Deno configuration with workspace settings
 ├── README.md                      # Root documentation
 └── LICENSE                        # Project license
+```
