@@ -1,0 +1,35 @@
+{
+  "tasks": {
+    "dev": "deno run --watch main.ts",
+    "test": "deno test",
+    "fmt": "deno fmt",
+    "lint": "deno lint",
+    "start:api": "deno run --allow-net --allow-env apps/api/src/main.ts",
+    "start:dashboard": "deno run --allow-net --allow-env apps/dashboard/src/main.ts"
+  },
+  "imports": {
+    "@std/assert": "jsr:@std/assert@1",
+    "@core/": "./packages/core/",
+    "@db/": "./packages/db/",
+    "@integrations/": "./packages/integrations/"
+  },
+  "workspace": {
+    "members": [
+      "apps/api",
+      "apps/dashboard",
+      "packages/core",
+      "packages/db",
+      "packages/integrations"
+    ]
+  },
+  "fmt": {
+    "files": {
+      "include": ["apps/", "packages/"]
+    }
+  },
+  "lint": {
+    "files": {
+      "include": ["apps/", "packages/"]
+    }
+  }
+}
